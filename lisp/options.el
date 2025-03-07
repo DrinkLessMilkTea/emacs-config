@@ -24,6 +24,9 @@
 (add-to-list 'default-frame-alist '(width . 200)) ; 设定启动图形界面时的初始 Frame 宽度（字符数）
 (add-to-list 'default-frame-alist '(height . 60)) ; 设定启动图形界面时的初始 Frame 高度（字符数）
 
+(set-face-attribute 'default nil :family "Maple Mono CN Medium" :height 180)  ; 强制全局字体
+
+
 (defun open-init()
   (interactive)
   (find-file ".emacs.d/init.el"))
