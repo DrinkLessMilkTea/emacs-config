@@ -7,6 +7,7 @@
 ;;; Code:
 
 (electric-pair-mode t)            ; 自动补全括号
+(setq help-window-select t) ; 选中帮助文档
 (add-hook 'prog-mode-hook #'show-paren-mode) ; 编程模式下，光标在括号上时高亮另一个括号
 (column-number-mode t)            ; 在 Mode line 上显示列号
 (global-auto-revert-mode t)         ; 当另一程序修改了文件时，让 Emacs 及时刷新 Buffer
@@ -24,16 +25,16 @@
 (add-to-list 'default-frame-alist '(width . 200)) ; 设定启动图形界面时的初始 Frame 宽度（字符数）
 (add-to-list 'default-frame-alist '(height . 60)) ; 设定启动图形界面时的初始 Frame 高度（字符数）
 
-(set-face-attribute 'default nil :family "Maple Mono CN Medium" :height 180)  ; 强制全局字体
+(set-face-attribute 'default nil :family "Maple Mono CN Medium" :height 200)  ; 强制全局字体
 
 
 (defun open-init()
   (interactive)
-  (find-file ".emacs.d/init.el"))
+  (find-file "~/.emacs.d/init.el"))
 
 (defun open-config()
   (interactive)
-  (find-file ".emacs.d/lisp"))
+  (find-file "~/.emacs.d/lisp"))
 
 (provide 'options)
 ;;; options.el ends here

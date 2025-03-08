@@ -33,5 +33,8 @@
 (evil-define-key 'normal 'lsp-ui-mode-map (kbd "gd") 'lsp-ui-peek-find-definitions)
 (evil-define-key 'normal 'lsp-ui-mode-map (kbd "gD") 'lsp-ui-peek-find-references)
 
+;; latex keymaps
+(evil-define-key 'normal 'LaTeX-mode-map (kbd "<leader>r") 'TeX-command-master)
+
 (provide 'vim)
 ;;; vim.el ends here

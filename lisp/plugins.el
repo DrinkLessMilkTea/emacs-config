@@ -262,5 +262,12 @@ _Q_: Disconnect   _sl_: List locals    _bl_: Set log message
   :ensure
   :config (load-theme 'catppuccin :no-confirm))
 
+;; pdf-tools
+(use-package pdf-tools
+ :ensure t
+ :init
+ (pdf-loader-install))
+ (add-hook 'pdf-view-mode-hook (lambda () (display-line-numbers-mode -1)))
+
 (provide 'plugins)
 ;;; plugins.el ends here
